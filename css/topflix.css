@@ -1,0 +1,246 @@
+@charset "UTF_8";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+
+.header {
+  width: 100%;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 150px;
+}
+
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  margin-left: 30px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  color: #e50914;
+  transform: scale(1.05);
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../source/KR-ko-20250721-TRIFECTA-perspective_e27a5022-ddc3-4545-a5eb-1c788c8be067_small.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.headline {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.top-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* CTA 버튼 */
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #e50914, #b81d24);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #b81d24, #e50914);
+}
+
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left p {
+  font-size: 14px;
+}
+
+.footer-center ul,
+.footer-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-center li,
+.footer-right li {
+  display: inline-block;
+}
+
+.footer-center a,
+.footer-right a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-center a:hover,
+.footer-right a:hover {
+  color: #e50914;
+}
+
+.footer-right i {
+  margin-right: 8px;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  /* 헤더 */
+  .header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 20px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 헤더 */
+  .header {
+    padding: 15px;
+  }
+
+  .nav a {
+    font-size: 14px; 
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  
+  .footer {
+    font-size: 12px; 
+    padding: 20px 10px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    margin-bottom: 15px;
+  }
+
+  .footer-center ul, .footer-right ul {
+    flex-direction: column; 
+  }
+
+  .footer-center li, .footer-right li {
+    margin-bottom: 8px;
+  }
+}

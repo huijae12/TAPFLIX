@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAPFLIX</title>
+  <link rel="stylesheet" href="./css/topflix2.css">
+  <link rel="icon" href="./source/favicon1-01.png" type="image/png">
+</head>
+<body>
+  
+  
+  <header class="header">
+    <img src="./source/logo.png" alt="탑플릭스 로고" class="logo">
+    <nav class="nav">
+      <a href="#">홈</a>
+      <a href="#">장르별</a>
+      <a href="#">TOP20</a>
+      <a href="#">이벤트</a>
+    </nav>
+  </header>
+
+  <section class="vs-battle">
+    <h2 class="section-title">오늘의 탑 콘텐츠 추천</h2>
+
+    <div class="vs-container">
+    
+      <div class="card-wrapper">
+      
+        <div class="vs-card">
+          <img src="./source/kpopdemonhunters.webp" alt="케이팝 데몬 헌터스">
+          <h3>케이팝 데몬 헌터스</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/trigger.jpg" alt="트리거">
+          <h3>트리거</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/squidgame.webp" alt="오징어게임">
+          <h3>오징어게임</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/84.webp" alt="84">
+          <h3>84제곱미터</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/pocsac.webp" alt="폭싹">
+          <h3>폭싹 속았수다</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/gwangjang.webp" alt="광장">
+          <h3>광장</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/joong.webp" alt="중증외상센터">
+          <h3>중증외상센터</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/wednesday.webp" alt="웬즈데이">
+          <h3>웬즈데이</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/sb.webp" alt="승부">
+          <h3>승부</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/weakhero.webp" alt="약한영웅">
+          <h3>약한영웅</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/strangerThings.webp" alt="기묘한이야기">
+          <h3>기묘한이야기</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/boytime.webp" alt="소년의시간">
+          <h3>소년의 시간</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/dahmer.webp" alt="다머">
+          <h3>다머</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/bridgerton.webp" alt="브리저튼">
+          <h3>브리저튼</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/queensgambit.webp" alt="퀸스갬빗">
+          <h3>퀸스갬빗</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+
+        <div class="vs-card">
+          <img src="./source/lasasadepapel.webp" alt="종이의집">
+          <h3>종이의집</h3>
+          <a href="#" class="vote-btn">선택하기</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p>&copy; 2025 Tapflix. All Rights Reserved.</p>
+      </div>
+      <div class="footer-center">
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">이용 약관</a></li>
+          <li><a href="#">개인정보 처리방침</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
+  
+<script>
+  const cardWrapper = document.querySelector('.card-wrapper');
+let index = 0;
+const totalCards = 16;
+
+
+const cards = Array.from(document.querySelectorAll('.vs-card'));
+
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+
+shuffleArray(cards);
+
+
+cards.forEach(card => {
+  cardWrapper.appendChild(card);
+});
+
+
+function showNextCards() {
+  index += 2;
+
+  if (index >= totalCards) {
+    index = 0; 
+  }
+
+ 
+  cardWrapper.innerHTML = ''; 
+
+  for (let i = index; i < index + 2; i++) {
+    if (cards[i]) {
+      cardWrapper.appendChild(cards[i]);
+      
+      cards[i].classList.add('show-card'); 
+      const img = cards[i].querySelector('img');
+      img.classList.add('show-image'); 
+    }
+  }
+}
+
+
+document.querySelectorAll('.vote-btn').forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault(); 
+
+  
+    const selectedCard = e.target.closest('.vs-card');
+    selectedCard.querySelector('h3').style.color = '#fff';
+
+    const img = selectedCard.querySelector('img');
+    img.classList.add('show-image');
+
+    
+    showNextCards();
+  });
+});
+
+
+document.querySelector('.next-btn').addEventListener('click', showNextCards);
+
+</script>
+
+</body>
+</html>
