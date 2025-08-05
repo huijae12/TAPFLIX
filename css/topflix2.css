@@ -93,7 +93,7 @@ body {
 
 
 .vs-card {
-  width: 400px;
+  width: 300px;
   text-align: center;
   opacity: 0; 
   transform: translateY(-20px); 
@@ -107,7 +107,7 @@ body {
 
 .vs-card img {
   width: 100%;
-  height: 520px;
+  height: 420px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -310,3 +310,4 @@ body {
     margin-bottom: 8px;
   }
 }
+
